@@ -166,13 +166,11 @@ int askChoice(int max)
     THREATEXCEPTON<InputError>(clearInput)
 {
     int choice{0}
-    do{
-        printMenu(); // affiche un menu avec les possibilités
-        std::cin>>choice;
-        if(choice==0){
-            throw InputError;
-        }
-    } while(choice < max);
+    printMenu(); // affiche un menu avec les possibilités
+    std::cin>>choice;
+    if(choice==0 || choice > max){
+        throw InputError;
+    }
     return choice
 }
 ```
