@@ -32,7 +32,7 @@ C++ utilise la directive du préprocesseur `#include <filename>` pour permettre
 au compilateur de connaitre les éléments externes à l'unité de compilation
 dont il a besoin.
 
-L'utilisation de **modules** rendrait la compilation plus rapide
+L'utilisation de [modules](modules.md#top) rendrait la compilation plus rapide
 <a id="static" ></a>
 ## le mot clé `static`
 
@@ -196,6 +196,10 @@ Une meilleure intégration de la programmation par contrat permettrait :
 - aux outils d'apporter plus facielement la preuve que le programme est
   correct
 - Sans doute bien d'autres choses encore
+
+### Voir aussi 
+
+- [La prorgrammation par contrat](ppc.md#top)
 
 <a id="conception"></a>
 ## Interdire les décisions conceptuelles aberrantes
@@ -397,5 +401,18 @@ auto min(A a, B b)->(A:B){
 ne serait-il pas tout  aussi expressif?
 
 Je n'écarte, bien sur, absolument pas la possibilité d'avoir "loupé quelque chose" au sujet de `decltype`.  Mais dans ce cas, j'aimerais savoir quoi.
+
 <a id="no_change" ></a>
 # Et ce qui ne changerait pas
+
+En gros, en dehors éventuellement de la syntaxe et des points abordés, le langage que j'envisage de mettre au point
+respecterait pleinement la philosophie que j'apprécie tellement et qui est propre à C++
+
+<a id="also"></a>
+## Voir aussi
+- [Buts du projet](README.md#top)
+- [Une description succinte](description.md#top)
+- [La modularité](modules.md#top)
+- [les fonctionnalités du langage](functionalities.md#top)
+- [La grammaire et la syntaxe](grammar.md#top)
+- [la programmation par contrat](ppc.md#top)
