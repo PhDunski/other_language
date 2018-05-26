@@ -359,5 +359,43 @@ En supprimant de telles exceptions au règles grammaticales, les choses devienne
                             // modifier la valeur de l'entier)
 ```
 
+<a id="inference"></a>
+## Simplifier l'inférence de type
+
+Depuis que le mot clé `auto` est utilisé pour l'inférence de type, j'essaye de suivre la règle 
+[AAA](https://herbsutter.com/2013/08/12/gotw-94-solution-aaa-style-almost-always-auto/) de Herb 
+Sutter; et cela me simplifie énormément la vie.
+
+Il y a cependant une aspect de l'inférence de type que je n'arrive pas à intégrer, c'est l'utilisation du mot clé `decltype`.
+
+J'ai beau comprendre ce qu'il rend possible de faire, j'ai l'impression qu'il est redondant avec l'usage du mot clé auto.
+
+Un exemple classique de son usage est
+
+```cpp
+template <typename A, typename B>
+auto min(A a, B b)-> decltype(a < b ? a : b){
+    return a < b ? a : b;
+}
+```
+ce qui permet au compilateur de déduire que la valeur de  retrour de cette fonction est de type A si a est plus petit que a est plus petit que b et qu'elle est de type B dans le cas contraire.
+
+C'est très chouette! mais, à partir du moment où l'on place le compilateur face à une situation dans laquelle il devra déterminer le le type d'une expression, ne pourrait-on pas faire en sorte qu'il le fasse de manière systématique?  Un code proche de
+
+```cpp
+template <typename A, typename B>
+auto min(A a, B b){
+    return a < b ? a : b;
+}
+// Ou meme proche de
+template <typename A, typename B>
+auto min(A a, B b)->(A:B){
+    return a < b ? a : b;
+}
+```
+
+ne serait-il pas tout  aussi expressif?
+
+Je n'écarte, bien sur, absolument pas la possibilité d'avoir "loupé quelque chose" au sujet de `decltype`.  Mais dans ce cas, j'aimerais savoir quoi.
 <a id="no_change" ></a>
 # Et ce qui ne changerait pas
