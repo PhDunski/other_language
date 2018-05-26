@@ -25,6 +25,7 @@ Parmi ceux-ci, je citerais :
 - l'ordre d'évaluation des arguments et des opérandes est mal défini
 - le manque de distinction entre un `char` et un `byte` (avant C++17)
 - les exceptions dans la grammaire
+- l'inférence de type est trop complexe
 
 Ce projet a pour but dévaluer la faisabilité de créer un nouveau langage qui profiterait de l'expérience acquise
 grâce à C++ pour essayer d'en corriger les défauts les plus criants
