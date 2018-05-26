@@ -180,5 +180,11 @@ réel besoin de pouvoir définir des fonctionnalités comme étant à "usage
 interne" du module (ou de l'unité de compilation) de manière simple et
 efficace.
 
-### Voir aussi
-- [La grammaire associée](grammar.md#modules)
+<a id="also"></a>
+## Voir aussi
+- [Buts du projet](README.md#top)
+- [Une description succinte](description.md#top)
+- [Corrections et avantages](changes.md#top)
+- [les fonctionnalités du langage](functionalities.md#top)
+- [La grammaire et la syntaxe](grammar.md#top)
+- [la programmation par contrat](ppc.md#top)
