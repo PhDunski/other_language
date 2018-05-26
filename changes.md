@@ -299,5 +299,65 @@ Si la notion de *byte* (un ensemble de N bits successifs en mémoire) pouvait
 distinction entre les deux deviendrait beaucoup plus claire, et la notion de
 `ByteArray` plus facile à expliquer et à justifier.
 
+<a id="grammar"></a>
+## Supprimer les exceptions dans la grammaire
+
+On rencontre quelques exceptions dans la grammaire du C++ qui sont certes sympatiques, 
+mais qui compliquent l'analyse syntaxique du compilateur et qui, de plus, rendent
+certaines construction plus "difficiles" à appréhender pour le lecteur.
+
+L'une des règles auxquelles nous sommes certainement le plus confrontés est la
+règle concernant la position des *cv-qualifiers* (autrement dit des mots clé `const` 
+et `volatile`).  En effet, elle s'exprime de la manière suivante
+
+> Les CV-qualifier s'appliquent à ce qui se trouve à leur gauche, sauf s'il n'y a rien
+> à gauche, auquel cas ils s'applique à ce qui se trouve à leur droite.
+
+Cette exception permet au développeur d'obtenir un résultat similaire avec le code
+
+```cpp
+
+int const value{3}; //règle générale
+
+```
+
+et avec le code
+
+```cpp
+
+const int value{3}; //exception à la règle
+
+```
+
+Ce qui est finalement "assez symatique".  Mais cette exception apporte son lot d'embrouille, car, un code proche de
+
+```cpp
+
+const int * tab; // exception à la règle
+
+```
+
+laisse planer un doute: est-ce le pointeur qui est constant mais pas l'entier (on peut modifier la 
+valeur de l'élément pointé, mais pas changer l'adresse à laquelle il se trouve)? est-ce l'entier 
+qui est constant, mais pas le pointeur (on peut faire pointer le pointeur sur un autre entier mais 
+on ne peut pas modifier la valeur de l'entier) ? ou sont-ce le pointeur **et** l'entiers qui sont 
+constant (on ne peut ni changer l'entier pointé ni la valeur de cet entier) ?
+
+En supprimant de telles exceptions au règles grammaticales, les choses deviennent tout de suite beaucoup plus claires:
+```cpp
+    int const * ptr1; // un pointeur sur un entier constant
+                      // (on peut faire pointer le pointeur sur un autre
+                      // entier, mais on ne peut pas modifier la valeur
+                      // de l'entier)
+    int * const ptr2; // un pointeur constant sur un entier
+                      // on ne peut pas faire pointer le pointeur sur un
+                      // autre entier, mais on peut modifier la valeur
+                      // de l'entier)
+    int const * const ptr3; // un pointeur constant sur un entier constant
+                            // (on ne peut pas faire pointer le pointeur
+                            // sur un autre entier et on ne peut pas
+                            // modifier la valeur de l'entier)
+```
+
 <a id="no_change" ></a>
 # Et ce qui ne changerait pas
