@@ -77,3 +77,139 @@ compilation au sein d'un groupedoit etre suffisamment précise que pour permettr
 #### La grammaire 
 
 Cette grammaire sera développée plus tard.
+
+<a id="structured"></a>
+## la programmation structurée
+
+La grammaire associée à la programmation structurée devra prendre en compte:
+
+- l'intégration [de mot clés désignant les types primitifs](#primitif)
+- l'intégration de [tests Vrai / Faux](#true_false)
+- l'intégration de [tests à choix multiple](#test_multiple)
+- l'intégration de [boucles Tant que](#while_loop)
+- l'itégration de [boucles Jusque](#do_loop)
+- l'intégration de [boucles Pour](#for_loop)
+- l'intégration de [boucles sur le contenu d'une collection](#collection_loop)
+- l'intégration de [boucle sur des intervalles](#interval_loop)
+- l'intégration des [alias de type](#alias)
+- l'intégration des [énumérations](#enum)
+- l'intégration des [agrégats de donnée](#agregate)
+- l'intégration de [la notion de dictionnaire](#dico)
+- l'intégration des [unions](#union)
+
+<a id="primitif"></a>
+### Les types primitifs
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="true_false"></a>
+### Les tests vrai faux
+
+description à venir 
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="test_multiple"></a>
+### les tests à choix multiple
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="while_loop"></a>
+### Les boucle "Tant que"
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="do_loop"></a>
+### les boucle "jusque"
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="for_loop"></a>
+### les boucle "pour"
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="collection_loop"></a>
+### les boucles sur le contenu d'une collection
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="interval_loop"></a>
+### les boucles sur le contenu d'une collection
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="alias"></a>
+### Les alias de type
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="enum"></a>
+### Les énumérations
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="agregate"></a>
+### Les agrégations
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="dico"></a>
+### Les dictionnaires
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+<a id="unions"></a>
+### Les unions
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
