@@ -1,4 +1,4 @@
-<a id="top></id>
+<a id="top"></id>
 # Les flux d'exécution
 
 le **flux d'exécution** d'un programme ou d'un algorithme représente l'ensemble des instructions
@@ -16,6 +16,7 @@ lorsque l'on travaille --par exemple-- avec des boucles ou des fonctions récurs
 
 Par contre, la deuxième situation ne survient que lorsqu'une erreur survient lors de l'exécution.
 
+<a id="breaking_stream"></a>
 ## Quand une erreur survient
 
 Lorsqu'une erreur survient durant l'exécution d'un programme ou d'un algorithme, nous pouvons 
