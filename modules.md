@@ -179,3 +179,6 @@ Et les exemples similaires sont véritablement légion, ce qui démontre un
 réel besoin de pouvoir définir des fonctionnalités comme étant à "usage
 interne" du module (ou de l'unité de compilation) de manière simple et
 efficace.
+
+### Voir aussi
+- [La grammaire associée](grammar.md#modules)
