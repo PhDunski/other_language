@@ -59,3 +59,4 @@ la puissance du C++ mais qui en résoudrait les problèmes les plus criants.
 - [La modularité](modules.md#top)
 - [les fonctionnalités du langage](functionalities.md#top)
 - [La grammaire et la syntaxe](grammar.md#top)
+- [la programmation par contrat](ppc.md#top)
