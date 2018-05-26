@@ -97,6 +97,7 @@ La grammaire associée à la programmation structurée devra prendre en compte:
 - l'intégration de [la notion de dictionnaire](#dico)
 - l'intégration des [unions](#union)
 - l'intégration des [expressions lamda](#lambda)
+- l'intégration de l'[inférence de type](#inference)
 
 <a id="primitif"></a>
 ### Les types primitifs
@@ -217,6 +218,16 @@ Cette grammaire sera développée plus tard.
 
 <a id="lambda"></a>
 ### Les expressions lambda
+
+description à venir
+
+#### La grammaire 
+
+Cette grammaire sera développée plus tard.
+
+
+<a id="inference"></a>
+### L'inférence de types
 
 description à venir
 
