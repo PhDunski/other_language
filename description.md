@@ -33,3 +33,11 @@ S'il est possible de les mettre en place, certains usages spécifiques pourront
   plus rapide
 - la traduction automatique de langages comme C, C++ ou java dans le langage
   à  créer.
+<a id="also"></a>
+## Voir aussi
+- [Buts du projet](README.md#top)
+- [Corrections et avantages](changes.md#top)
+- [La modularité](modules.md#top)
+- [les fonctionnalités du langage](functionalities.md#top)
+- [La grammaire et la syntaxe](grammar.md#top)
+- [la programmation par contrat](ppc.md#top)
