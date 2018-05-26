@@ -12,6 +12,60 @@ Si, pour une raison ou une autre, la fonctionnalité n'obtient pas les données 
 la fonctionnalité n'est pas en mesure de fournir le résultat attendu, il y a "rupture du contrat"
 et tout peut arriver.
 
+<a id="notions"></a>
+## Trois notions essentielles
+
+La programmation parcontrat a recours à trois notions primaires:
+
+- les [invariants](#invariant)
+- les [pré conditions](#precondition)
+- les [post conditions](#postcondition)
+
+Ces trois notions ont pour but de garantir la "bonne fin" du contrat passé entre l'algorithme 
+et l'utilisateur, ou, si vous préférez, le fait que le résultat obtenu correspondra effectivement 
+au résultat souhaité.
+<a id="invariant"></a>
+### Les invariants
+Le terme "invariant" représente les éléments qui doivent etre validés aussi bien en tant que précondition 
+qu'en tant que post condition.
+
+**Si** (et **seulement si**) un algorithme peut **garantir** sa "bonne fin" ainsi que le fait qu'il **ne 
+sera pas interrompu** (entre autres par un autre thread qui accéderait aux memes donnés), les invariants 
+**peuvent** ne pas etre **temporairement** respectés durant l'exécution de l'algorithme,
+
+> **NOTE** Il va de soi que cette autorisation de non respect **temporaire** doit etre utilisée **avec
+  parcimonie**
+
+<a id="precondition"></a>
+### les pré conditions
+
+Le terme "pré condition" représente les conditions qui **doivent** etre validées **au plus tard**
+au moment où l'exécution de l'algorithme **commence**.
+
+Cela inclut entre autres -- mais pas de manière exhaustive -- les invariants.
+
+Si ces conditions ne sont pas validées, cela indique une **erreur de logique** de la part de 
+**l'utilisateur** de l'algorithme, qui **devra** les corriger avant le passage en production
+de la fonctionnalité.
+
+<a id="postcondition"></a>
+
+le terme "post condition" représente les conditions qui **doivent** etre validées **au plus tard**
+au moment où l'algorithme **s'achève**.
+
+Cela inclut entre autres -- mais pas de manière exhaustive -- les invariants.
+
+Deux possibilités sont envisageables en cas de non respect des post conditions:
+
+- l'erreur porte sur une erreur de la part du **développeur** de l'algorithme, comme 
+  -- de manière non exhaustive -- un non respect des invariants
+- l'erreur porte sur un élément indépendant de la volonté du développeur de l'algorithme
+
+Le premier cas **devra** etre corrigé **avant** que le développeur de l'algorithme ne
+le mette en production; le deuxième cas **devrait** etre pris en compte par l'utilisateur
+de l'algorithme.
+
+
 <a id="rules"></a>
 ## Une règle
 
