@@ -92,6 +92,7 @@ d'y apporter une solution.  Mais l'utilisateur de l'algorithme serait "bien insp
 "procédure de secours" permettant d'y apporter une solution, à l'endroit de son code où il devient
 possible de le faire.
 
+Dans les deux cas, il s'agira de [sortir du flux normal](execution_stream#outgoing_stream) d'exécution du programme ou de l'algorithme
 
 <a id="also"></a>
 ## Voir aussi
