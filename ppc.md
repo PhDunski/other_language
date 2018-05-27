@@ -91,3 +91,13 @@ Dans le deuxième cas, il n'appartient jamais à l'algorithme qui est confronté
 d'y apporter une solution.  Mais l'utilisateur de l'algorithme serait "bien inspiré" de prévoir une
 "procédure de secours" permettant d'y apporter une solution, à l'endroit de son code où il devient
 possible de le faire.
+
+
+<a id="also"></a>
+## Voir aussi
+- [Buts du projet](README.md#top)
+- [Une description succinte](description.md#top)
+- [Corrections et avantages](changes.md#top)
+- [les fonctionnalités du langage](functionalities.md#top)
+- [la modularité](modules.md#top)
+- [La grammaire et la syntaxe](grammar.md#top)
