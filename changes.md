@@ -363,6 +363,17 @@ En supprimant de telles exceptions au règles grammaticales, les choses devienne
                             // modifier la valeur de l'entier)
 ```
 
+Un autre exemple d'exceptions de grammaire nous est donné au travers de ces mots clés qui nous permettent de créer des 
+types définis par l'utilisateur.
+
+En effet, l'indicateur de fin de bloc `}` se suffit a priori à lui-même (pour autant qu'il y ai un début de bloc correspondant).
+- c'est vrai pour les espaces de noms;
+- c'est vrai pour les définitions de fonctions;
+- c'est vrai pour les expressions lambda;
+- c'est vrai pour toutes les structures décisionnelles que l'on rencontre.
+
+Mais, nous sommes obligés de rajouter un `end_of_statement` (`;`) lorsque l'on défini une énumération, 
+une structure, une classe ou une union.  Et ca, ca n'a absolument aucun sens.
 <a id="inference"></a>
 ## Simplifier l'inférence de type
 
