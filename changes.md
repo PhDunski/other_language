@@ -402,6 +402,41 @@ ne serait-il pas tout  aussi expressif?
 
 Je n'écarte, bien sur, absolument pas la possibilité d'avoir "loupé quelque chose" au sujet de `decltype`.  Mais dans ce cas, j'aimerais savoir quoi.
 
+<a id="intuitive_loops"></a>
+## Des boucles "jusque" plus intuitives
+
+Cet aspect est tellement répendu dans les différents langages qu'il n'a pas l'air de déranger grand monde, mais
+quand on prend la peine d'y réfléchir le traitement de la condition pour les boucles "jusque" est pour le moins
+"contre intuitif".
+
+En effet, lorsque nous nous adressons à quelqu'un en lui tenant un langage proche de
+> Tu vas faire (ceci) jusqu'à ce que (cela)
+
+les termes utilisé pour (cela) représentent... l'autorisation d'arrêter
+
+Or, C++ considère la condition que l'on trouve dans le` ...} while(condition);` correspond à... la condition qui provoquera
+une excécution supplémentaire de la boucle, ce qui nous force à réfléchir à... la condition de "non arrêt" pour pouvoir 
+écrire le code.
+
+A mon sens, ce pourrait tout aussi bien être à cause de l'utilisation du même mot clé (`while`) pour les boucles 
+"tant que" et les boucles "jusque".
+
+Mais, tant qu'à définir un nouveau langage, peut-être serait-il temps de réintroduire le `until` que nous
+trouvons dans certains langage.
+
+Ainsi, les boucles "tant que" restraient inchangées  sous leur forme
+```cpp
+while(condition){
+    // ce qui doit être fait
+}
+```
+avec une conditon qui évalue si on doit entrer dans la boucle, alors que les boucles "tant que" prendraient une forme proche de
+```cpp
+do{
+   //ce qui doit être fait
+} until(condition);
+```
+avec une condition permettant d'évaluer si on peut / doit sortir de la boucle
 <a id="no_change" ></a>
 # Et ce qui ne changerait pas
 
