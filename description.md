@@ -2,7 +2,7 @@
 # Description
 
 Ce langage sera un langage de programmation **multi paradigme**,
-**compilé** d'usage général, **n'ayant pas recours à une machine virtuelle**,
+**compilable** d'usage général, **n'ayant pas recours à une machine virtuelle**,
 adapté à la création d'applications et de modules externes destinés à
 être utilisés en mode **protégé** aussi bien sur les platteformes de
 type "serveur" que sur les dispositifs personnels
